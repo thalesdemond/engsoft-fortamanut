@@ -10,4 +10,4 @@ $(BUILD_DIR)/$(OUTPUT_PDF):$(SOURCE)
 	libreoffice --headless --convert-to pdf:draw_pdf_Export --outdir $(BUILD_DIR) "$<"
 
 $(BUILD_DIR)/$(OUTPUT_MD):$(SOURCE)
-	pandoc "$<" -t markdown --extract-media=$(BUILD_DIR) -o "$@"
+	pandoc "$<" -t markdown --extract-media=$(BUILD_DIR)  -o "$@"
